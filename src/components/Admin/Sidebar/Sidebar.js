@@ -26,6 +26,7 @@ const Sidebar = () => {
 
                     <hr />
                     <div className="col-md-6">
+                        <h4>Welcome to admin page</h4>
                         <Switch>
                             <Route exact path="/order">
                                 <OrderList></OrderList>
