@@ -33,9 +33,6 @@ const Footer = () => {
                     <h4><span className='p-2 text-primary'><FontAwesomeIcon icon={faFacebook} /></span><span className='p-2 text-danger'><FontAwesomeIcon icon={faInstagram} /></span><span className='p-2 text-danger'><FontAwesomeIcon icon={faYoutube} /></span><span className='p-2 text-primary'><FontAwesomeIcon icon={faTwitter} /></span><span className='p-2 text-primary'><FontAwesomeIcon icon={faLinkedinIn} /></span></h4>
                 </div>
             </div>
-            <div>
-                <h1 className="bg-success text-light text-center m-5 p-2" >52.6-1minute ago done</h1>
-            </div>
         </footer>
     );
 };

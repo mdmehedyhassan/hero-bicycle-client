@@ -17,7 +17,7 @@ const Navbars = () => {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto " activeKey="/home">
                                 <Link className="p-2" to="/home">Home</Link>
-                                <Link className="p-2" to="/">Our Product</Link>
+                                <Link className="p-2" to="/user">User</Link>
                                 <Link className="p-2" to="/">Our Team</Link>
                                 <Link className="p-2" to="/">Contact Us</Link>
                                 <Link className="p-2" to="/admin">Admin</Link>

@@ -1,22 +1,16 @@
 import React, { useState } from 'react';
 
 const MakeAdmin = () => {
-    const [file, setFile] = useState(null);
     const [info, setInfo] = useState({});
     const handleBlur = e => {
         const newInfo = { ...info };
         newInfo[e.target.name] = e.target.value;
         setInfo(newInfo);
-    }
-    const handleFileChange = (e) => {
-        const newFile = e.target.files[0];
-        setFile(newFile);
+        
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         const formData = new FormData()
-        formData.append('File', file);
-        formData.append('name', info.name);
         formData.append('email', info.email);
 
         fetch('http://localhost:5000/addAdmin', {
@@ -30,6 +24,7 @@ const MakeAdmin = () => {
             .catch(error => {
                 console.error(error)
             })
+            e.preventDefault()
     }
     return (
         <div>
@@ -38,14 +33,7 @@ const MakeAdmin = () => {
                     <label for="exampleInputEmail1" className="form-label">Email address</label>
                     <input onBlur={handleBlur} type="text" className="form-control" placeholder="email" name="email" />
                 </div>
-                <div className="mb-3">
-                    <label for="exampleInputPassword1" className="form-label">name</label>
-                    <input onBlur={handleBlur} type="text" className="form-control" placeholder="name" name="name" />
-                </div>
-                <div className="mb-3">
-                    <label for="exampleInputPassword1" className="form-label">Photo upload</label>
-                    <input onChange={handleFileChange} type="file" className="form-control"  />
-                </div>
+                
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </div>
