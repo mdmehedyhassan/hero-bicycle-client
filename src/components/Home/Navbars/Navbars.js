@@ -19,7 +19,7 @@ const Navbars = () => {
                                 <Link className="p-2" to="/home">Home</Link>
                                 <Link className="p-2" to="/user">User</Link>
                                 <Link className="p-2" to="/">Our Team</Link>
-                                <Link className="p-2" to="/">Contact Us</Link>
+                                <Link className="p-2" to="/contactus">Contact Us</Link>
                                 <Link className="p-2" to="/admin">Admin</Link>
                                 <Link className="p-2" to="/login"><button className="btn btn-success">Login</button></Link>
                             </Nav>

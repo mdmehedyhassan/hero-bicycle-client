@@ -59,7 +59,6 @@ const Login = () => {
     }
     return (
         <div>
-            <Navbars></Navbars>
             <h2 className="text-center pt-5">Login With</h2>
             <div className="p-2 text-center ">
                 <button onClick={handleSignIn} className="p-2 btn btn-outline-success rounded-pill"><FontAwesomeIcon icon={faGoogle} /> Continue with Google </button>
